@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  context-path: /api
+
+application:
+  name: marketplace
+  title: Marketplace API
+  description: API to manage marketplaces
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/marketplace?allowPublicKeyRetrieval=true&useSSL=false
+    username: marketplace
+    password: marketapi
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    database: mysql
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      hbm2ddl:
+        auto: update
+      ddl-auto: update
